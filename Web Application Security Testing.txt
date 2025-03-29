@@ -1,0 +1,42 @@
+# 🔐 Web Application Security Testing – DVWA Project
+
+This project is a hands-on exploration of common web application vulnerabilities using **DVWA (Damn Vulnerable Web Application)**. The goal is to understand how real-world attacks work and how to mitigate them through ethical hacking practices.
+
+---
+
+## 🧰 Tools Used
+
+- XAMPP – Local server (Apache, MySQL, PHP)
+- DVWA – Vulnerable web app for security training
+- Burp Suite – Manual testing and request manipulation
+- OWASP ZAP – Automated vulnerability scanner
+- Web Browser (Chrome/Firefox)
+- Kali Linux (optional)
+- GitHub for documentation
+
+---
+
+## 🛠️ Vulnerabilities Exploited
+
+| Vulnerability | Description |
+|---------------|-------------|
+| **SQL Injection (SQLi)** | Bypassed SQL logic using `' OR '1'='1` to dump all user data |
+| **Stored XSS (Cross-Site Scripting)** | Injected malicious `<script>` tag into message form to trigger JavaScript |
+| **CSRF (Cross-Site Request Forgery)** | Simulated an attack using a malicious image tag to silently change passwords |
+
+---
+
+## ⚙️ Attack Demonstrations
+
+### 🔹 1. SQL Injection
+
+**Payload Used:**
+```sql
+' OR '1'='1
+
+
+Result:
+
+Application returned all user records
+
+Query logic was bypassed using a true condition
